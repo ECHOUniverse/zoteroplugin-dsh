@@ -35,6 +35,7 @@ import { PLUGIN_NAME, PLUGIN_VERSION, type ViewEvent } from './shared/protocol.t
 import { connectViewEvents, getStatus, type ViewStreamHandle } from './client/api.ts'
 import { chatFaceFrom, type ChatFace } from './client/chat-draft.ts'
 import { DICTIONARIES } from './client/i18n.ts'
+import { GuideLibraryIcon } from './client/guide-icon.tsx'
 import { Icon } from './client/icons.tsx'
 import { CSS } from './client/styles.ts'
 import { ZoteroStore, currentRoute, type Route } from './client/store.ts'
@@ -73,6 +74,8 @@ interface ClientContext {
         readonly order: number
         readonly title: () => string
         readonly description?: () => string
+        /** Guide artwork: a React component the host renders at a fixed `size` (26 with a description). */
+        readonly icon?: (props: { readonly size: number; readonly className?: string }) => ReactNode
       }[]
     }): () => void
   }
@@ -304,6 +307,7 @@ export function apply(ctx: ClientContext): void {
             order: 100,
             title: () => t('guide.title'),
             description: () => t('guide.description'),
+            icon: GuideLibraryIcon,
           },
         ],
       }),
