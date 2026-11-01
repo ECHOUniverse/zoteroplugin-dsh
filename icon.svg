@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+  <defs>
+    <linearGradient id="zoteroShelf" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cc2936"/>
+      <stop offset="1" stop-color="#8f1d2c"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="34" height="34" rx="8" fill="url(#zoteroShelf)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 27V10.5A1.5 1.5 0 0 1 10.5 9H16v18"/>
+    <path d="M16 9h5.5A1.5 1.5 0 0 1 23 10.5V27"/>
+    <path d="M25 11h1.5A1.5 1.5 0 0 1 28 12.5V25.5A1.5 1.5 0 0 1 26.5 27H9"/>
+    <path d="M12 13h2M12 16.5h2M19 13h2M19 16.5h2"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+# @hanxu131/dsh-zotero bundle patch: mounts the Zotero bundle into a dsh profile.
+# The Host half (lib/index.js) owns the plugin configuration and, when the
+# profile provides a webServer, the `/dsh-zotero` HTTP routes over the Zotero
+# Local API; the client half (lib/client.js) registers the right-sidebar tab.
+#
+# Install: dsh plugin --profile <name> add @hanxu131/dsh-zotero
+# Local:   dsh plugin --profile <name> add link:/path/to/zoteroplugin-dsh
+- insert:
+    - id: zotero
+      # Quoted because `@` is a reserved YAML indicator.
+      name: '@hanxu131/dsh-zotero'
+      config:
+        localApiBaseUrl: http://127.0.0.1:23119
